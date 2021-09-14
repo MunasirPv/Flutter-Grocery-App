@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_app/utils/page_navigator.dart';
+import 'package:grocery_app/view/login.dart';
 
 class Onboarding extends StatelessWidget {
   const Onboarding({Key? key}) : super(key: key);
@@ -44,7 +46,7 @@ class Onboarding extends StatelessWidget {
               ),
               const SizedBox(height: 30),
               ElevatedButton(
-                onPressed: (){},
+                onPressed: () => PageNavigator.push(context, route: const Login()),
                 style: ElevatedButton.styleFrom(
                   primary: Theme.of(context).primaryColor,
                   padding: const EdgeInsets.symmetric(
