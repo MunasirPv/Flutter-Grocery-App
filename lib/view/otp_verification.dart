@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:grocery_app/utils/page_navigator.dart';
-import 'package:grocery_app/view/otp_verification.dart';
 
-class LoginWithNumber extends StatelessWidget {
-  const LoginWithNumber({Key? key}) : super(key: key);
+class OTPVerification extends StatelessWidget {
+  const OTPVerification({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +24,7 @@ class LoginWithNumber extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 const Text(
-                  'Enter your mobile number',
+                  'Enter your 4-digit code',
                   style: TextStyle(
                     fontSize: 26,
                     fontWeight: FontWeight.w600,
@@ -35,10 +33,13 @@ class LoginWithNumber extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
                 TextFormField(
-                  keyboardType: TextInputType.phone,
+                  keyboardType: TextInputType.number,
                   autofocus: true,
+                  maxLength: 4,
                   decoration: const InputDecoration(
-                    hintText: 'Phone number'
+                    hintText: '- - - -',
+                    labelText: 'Code',
+                    counterText: ''
                   ),
                 ),
               ],
@@ -55,7 +56,7 @@ class LoginWithNumber extends StatelessWidget {
                   primary: Theme.of(context).primaryColor,
                 ),
                 child: const Text(
-                  'Login with Email',
+                  'Resend Code',
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w500
@@ -67,7 +68,7 @@ class LoginWithNumber extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => PageNavigator.push(context, route: const OTPVerification()),
+        onPressed: (){},
         backgroundColor: Theme.of(context).primaryColor,
         child: const Icon(Icons.chevron_right),
       ),
