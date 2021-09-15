@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:grocery_app/utils/page_navigator.dart';
+import 'package:grocery_app/view/login_with_number.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
@@ -23,10 +25,13 @@ class Login extends StatelessWidget {
                     fontWeight: FontWeight.w600
                   ),
                 ),
-                TextFormField(
-                  enabled: false,
-                  decoration: const InputDecoration(
-                    hintText: 'Phone number'
+                InkWell(
+                  onTap: () => PageNavigator.push(context, route: const LoginWithNumber()),
+                  child: TextFormField(
+                    enabled: false,
+                    decoration: const InputDecoration(
+                      hintText: 'Phone number'
+                    ),
                   ),
                 ),
                 const SizedBox(height: 30),
