@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_app/helper/submit_button.dart';
 import 'package:grocery_app/utils/page_navigator.dart';
 import 'package:grocery_app/view/login.dart';
 
@@ -45,22 +46,9 @@ class Onboarding extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 30),
-              ElevatedButton(
+              SubmitButton(
                 onPressed: () => PageNavigator.push(context, route: const Login()),
-                style: ElevatedButton.styleFrom(
-                  primary: Theme.of(context).primaryColor,
-                  padding: const EdgeInsets.symmetric(
-                    vertical: 15
-                  ),
-                ),
-                child: const Text(
-                  'Get Started',
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.white
-                  ),
-                ),
+                title: 'Get Started',
               ),
               const SizedBox(height: 50),
             ],

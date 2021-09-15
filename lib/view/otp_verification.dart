@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_app/utils/page_navigator.dart';
+import 'package:grocery_app/view/select_location.dart';
 
 class OTPVerification extends StatelessWidget {
   const OTPVerification({Key? key}) : super(key: key);
@@ -68,7 +70,7 @@ class OTPVerification extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){},
+        onPressed: () => PageNavigator.push(context, route: const SelectLocation()),
         backgroundColor: Theme.of(context).primaryColor,
         child: const Icon(Icons.chevron_right),
       ),

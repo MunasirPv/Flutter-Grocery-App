@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_app/utils/page_navigator.dart';
+import 'package:grocery_app/view/login_with_email.dart';
 import 'package:grocery_app/view/otp_verification.dart';
 
 class LoginWithNumber extends StatelessWidget {
@@ -50,7 +51,7 @@ class LoginWithNumber extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.only(left: 20, bottom: 20),
               child: TextButton(
-                onPressed: (){},
+                onPressed: () => PageNavigator.push(context, route: const LoginWithEmail()),
                 style: TextButton.styleFrom(
                   primary: Theme.of(context).primaryColor,
                 ),
