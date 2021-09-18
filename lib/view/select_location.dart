@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_app/helper/submit_button.dart';
+import 'package:grocery_app/utils/page_navigator.dart';
+import 'package:grocery_app/view/master.dart';
 
 class SelectLocation extends StatelessWidget {
   const SelectLocation({Key? key}) : super(key: key);
@@ -64,7 +66,7 @@ class SelectLocation extends StatelessWidget {
                 ),
                 const SizedBox(height: 30),
                 SubmitButton(
-                  onPressed: () {},
+                  onPressed: () => PageNavigator.pushAndRemoveUntil(context, route: Master()),
                   title: 'Submit',
                 ),
               ],
