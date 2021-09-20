@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_app/helper/bottom_bar.dart';
 import 'package:grocery_app/view/home.dart';
+import 'package:grocery_app/general/global_values.dart' as global;
 
 class Master extends StatelessWidget {
-  final navigatorKey = GlobalKey<NavigatorState>();
+  const Master({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      key: global.scaffoldKey,
       body: Navigator(
-        key: navigatorKey,
+        key: global.navigatorKey,
         initialRoute: '/',
         onGenerateRoute: (RouteSettings settings){
           late WidgetBuilder builder;

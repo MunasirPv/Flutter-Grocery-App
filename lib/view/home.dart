@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:grocery_app/model/item_model.dart';
 import 'package:grocery_app/utils/page_navigator.dart';
 import 'package:grocery_app/view/item_details.dart';
+import 'package:grocery_app/general/global_values.dart' as global;
 
 class Home extends StatelessWidget {
   Home({Key? key}) : super(key: key);
@@ -126,7 +127,7 @@ class Home extends StatelessWidget {
                 itemBuilder: (BuildContext context, int index){
                   ItemModel item = exclusiveOfferList[index];
                   return InkWell(
-                    onTap: () => PageNavigator.push(context, route: const ItemDetails()),
+                    onTap: () => PageNavigator.pushWithGlobal(route: const ItemDetails()),
                     child: ItemCard(
                       image: item.image,
                       itemName: item.name,
